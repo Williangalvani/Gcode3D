@@ -26391,7 +26391,7 @@ THREE.TubeGeometry = function ( path, segments, radius, radialSegments, closed, 
 
 		u = i / ( numpoints - 1 );
 
-		pos = path.getPointAt( u );
+		pos = path.getPointAt( i );
 
 		tangent = tangents[ i ];
 		normal = normals[ i ];
@@ -26497,7 +26497,7 @@ THREE.TubeGeometry.FrenetFrames = function ( path, segments, closed ) {
 
 		u = i / ( numpoints - 1 );
 
-		tangents[ i ] = path.getTangentAt( u );
+		tangents[ i ] = path.getTangentAt( i );
 		tangents[ i ].normalize();
 
 	}
